@@ -1,10 +1,11 @@
 ---
 layout: null
 ---
+
 {% assign today_str = site.time | date: "%Y-%m-%d" %}
 {% assign today_page = site.days | where: "date", today_str | first %}
+
 {% if today_page %}
-  <meta http-equiv="refresh" content="0; url={{ today_page.url }}" />
-{% else %}
-  <p>今日のページはまだありません。</p>
+  <p>今日のページはこちら：<a href="{{ today_page.url }}">{{ today_page.title }}</a></p>
 {% endif %}
+

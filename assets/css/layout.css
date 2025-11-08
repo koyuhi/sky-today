@@ -1,0 +1,83 @@
+@charset "UTF-8";
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  font-family: "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  color: #fff;
+}
+
+.splide, .splide__track {
+  height: 100vh;
+}
+
+/* スライド全体 */
+.slide-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg, #222);
+}
+
+/* 画像 */
+.slide-wrapper img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 右上：年月日 */
+.page-date {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 10px;
+  border-radius: 6px;
+  z-index: 50;
+  backdrop-filter: blur(4px);
+}
+
+/* 右下：キャプション */
+.caption {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 6px 10px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  max-width: 70%;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.splide__track {
+  height: 100vh;
+}
+
+/* スマホ向け */
+@media (max-width: 768px) {
+  .page-date {
+    font-size: 12px;
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+  }
+  .caption {
+    font-size: 13px;
+    right: 8px;
+    bottom: 8px;
+    max-width: 80%;
+  }
+  .slide-wrapper img {
+    max-height: 80vh;
+  }
+}

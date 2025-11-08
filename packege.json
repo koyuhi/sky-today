@@ -1,0 +1,7 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "scripts": {
+        "sass:watch": "sass --watch _scss:assets/css --no-source-map"
+    }
+}

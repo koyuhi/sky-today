@@ -1,0 +1,5 @@
+title: 今日の雲たち
+collections:
+    days:
+        output: true
+        permalink: /:collection/:name/

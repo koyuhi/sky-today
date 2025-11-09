@@ -4,4 +4,4 @@ timezone: Asia/Tokyo
 collections:
   days:
     output: true
-    permalink: /:collection/:name/
+    permalink: /:collection/:name.html

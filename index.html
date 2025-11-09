@@ -6,6 +6,5 @@ layout: null
 {% assign today_page = site.days | where: "date", today_str | first %}
 
 {% if today_page %}
-  <p>今日のページはこちら：<a href="{{ today_page.url }}">{{ today_page.title }}</a></p>
+<p>今日のページはこちら：<a href="{{ today_page.url }}">{{ today_page.title }}</a></p>
 {% endif %}
-

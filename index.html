@@ -14,7 +14,7 @@ layout: default
 {% endfor %}
 
 {% if today_page %}
-<p>今日のページはこちら：<a href="{{ today_page.url }}">{{ today_page.title }}</a></p>
+<p>今日のページはこちら：<a href="{{ site.baseurl }}{{ today_page.url }}">{{ today_page.title }}</a></p>
 {% else %}
 <p>今日のページはまだありません。</p>
 {% endif %}

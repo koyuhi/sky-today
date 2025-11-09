@@ -1,0 +1,11 @@
+// ターミナルに ```npm run watch:sass``` と入力して実行
+{
+    "name": "sky-today",
+    "version": "1.0.0",
+    "devDependencies": {
+        "sass": "^1.69.5"
+    },
+    "scripts": {
+        "watch:sass": "sass --watch _scss/layout.scss:assets/css/layout.css"
+    }
+}

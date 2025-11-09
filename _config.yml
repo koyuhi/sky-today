@@ -1,5 +1,6 @@
 title: 今日の雲たち
 baseurl: /sky-today
+timezone: Asia/Tokyo
 collections:
   days:
     output: true

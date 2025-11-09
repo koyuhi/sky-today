@@ -23,35 +23,11 @@
         <div id="splide" class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
-                    {% assign default_bg = "#222" %} {% for img in page.images
-                    %}
+                    {% assign default_bg = "#222" %}
+                    {% for img in page.images %}
                     <li class="splide__slide">
-                        <div
-                            class="slide-wrapper"
-                            style="--bg: {{ img.bg | default: default_bg }}"
-                        >
-                            <img
-                                src="{{ site.baseurl }}{{ img.src }}"
-                                alt="{{ img.caption }}"
-                                loading="lazy"
-                            />
-
-                            {% if img.caption %}
-                            <div class="caption">{{ img.caption }}</div>
-                            {% endif %}
-                        </div>
-                    </li>
-                    {% endfor %} {% for img in page.images %}
-                    <li class="splide__slide">
-                        <div
-                            class="slide-wrapper"
-                            style="--bg: {{ img.bg | default: default_bg }}"
-                        >
-                            <img
-                                src="{{ site.baseurl }}{{ img.src }}"
-                                alt="{{ img.caption }}"
-                            />
-
+                        <div class="slide-wrapper" style="--bg: {{ img.bg | default: default_bg }}">
+                            <img src="{{ site.baseurl }}{{ img.src }}" alt="{{ img.caption }}" loading="lazy" />
                             {% if img.caption %}
                             <div class="caption">{{ img.caption }}</div>
                             {% endif %}

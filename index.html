@@ -2,15 +2,19 @@
 layout: default
 ---
 
-トップページテスト {% assign today_str = site.time | date: "%Y-%m-%d" %} {%
+{% assign today_str = site.time | date: "%Y-%m-%d" %} {%
 assign today_page = site.days | where: "date", today_str | first %} 
 {% if today_page %}
 <p>
     今日のページはこちら：<a href="{{ today_page.url }}">{{ today_page.title }}</a>
 </p>
 {% else %}
-<p>本日分のページはまだありません。</p>
+<p>今日のページはまだありません。</p>
 {% endif %}
+<p>today_str: {{ today_str }}</p>
+{% for d in site.days %}
+  <p>{{ d.date | date: "%Y-%m-%d %H:%M:%S %z" }} - {{ d.title }}</p>
+{% endfor %}
 
 <h2>過去ログ</h2>
 <ul>

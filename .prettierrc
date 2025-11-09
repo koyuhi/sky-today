@@ -2,3 +2,8 @@
     "tabWidth": 4,
     "useTabs": false
 }
+{
+  "tabWidth": 4,
+  "useTabs": false,
+  "htmlWhitespaceSensitivity": "ignore"
+}

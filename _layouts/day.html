@@ -26,7 +26,7 @@
             <div id="splide" class="splide">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        {% assign default_bg = "#222" %}
+                        {% assign default_bg = "#fcfcfc" %}
                         {% for img in page.images %}
                         <li class="splide__slide">
                             <div class="slide-wrapper" style="--bg: {{ img.bg | default: default_bg }}">ß
@@ -37,10 +37,12 @@
                             </div>
                         </li>
                         {% endfor %}
+                        <li class="splide__slide">
+                            <div class="text">
+                                <p>{{ text | newline_to_br }}</p>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="text">
-                        <p>{{ text | newline_to_br }}</p>
-                    </div>
                 </div>
             </div> <!-- #splide ここまで -->
         </main>

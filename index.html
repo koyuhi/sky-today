@@ -17,7 +17,7 @@ today_page %}
   {% assign sorted_days = site.days | sort: "date" | reverse %}
   {% for day in sorted_days %}
     <li>
-      <a href="{{ day.url }}">{{ day.date }} {{ day.title }}</a>
+      <a href="{{ site.baseurl }}{{ day.url }}">{{ day.date | date: "%Y-%m-%d" }} {{ day.title }}</a>
     </li>
   {% endfor %}
 </ul>

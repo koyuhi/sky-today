@@ -2,9 +2,8 @@
 layout: default
 ---
 
-トップページテスト {% assign today_str = site.time | date: "%Y-%m-%d" %} {%
-assign today_page = site.days | where: "date", today_str | first %} {% if
-today_page %}
+トップページテスト {% assign today_str = site.time | date: "%Y-%m-%d" %}
+{% assign today_page = site.days | where_exp: "item", "item.date | date: '%Y-%m-%d' == today_str" | first %}
 <p>
     今日のページはこちら：<a href="{{ today_page.url }}">{{ today_page.title }}</a>
 </p>

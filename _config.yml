@@ -1,6 +1,6 @@
 title: 今日の雲たち
+baseurl: /sky-today
 collections:
-    days:
-        output: true
-        permalink: /:collection/:name/
-baseurl: /sky‑today
+  days:
+    output: true
+    permalink: /:collection/:name/

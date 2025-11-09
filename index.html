@@ -11,3 +11,13 @@ today_page %}
 {% else %}
 <p>本日分のページはまだありません。</p>
 {% endif %}
+
+<h2>過去ログ</h2>
+<ul>
+  {% assign sorted_days = site.days | sort: "date" | reverse %}
+  {% for day in sorted_days %}
+    <li>
+      <a href="{{ day.url }}">{{ day.date }} {{ day.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

@@ -2,12 +2,19 @@
 layout: default
 ---
 
-{% assign today_str = site.time | date: "%Y-%m-%d" %} {%
-assign today_page = site.days | where: "date", today_str | first %} 
+{% assign today_str = site.time | date: "%Y-%m-%d" %}
+{% assign today_page = nil %}
+
+{% for d in site.days %}
+  {% assign d_date = d.date | date: "%Y-%m-%d" %}
+  {% if d_date == today_str %}
+    {% assign today_page = d %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
 {% if today_page %}
-<p>
-    今日のページはこちら：<a href="{{ today_page.url }}">{{ today_page.title }}</a>
-</p>
+<p>今日のページはこちら：<a href="{{ today_page.url }}">{{ today_page.title }}</a></p>
 {% else %}
 <p>今日のページはまだありません。</p>
 {% endif %}

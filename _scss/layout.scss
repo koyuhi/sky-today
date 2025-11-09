@@ -1,13 +1,6 @@
 @charset 'utf-8';
 
 
-html, body {
-    margin: 0;
-    height: 100%;
-    background: #000;
-    font-family: "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", sans-serif;
-    color: #fff;
-}
 
 .splide, .splide__track {
     height: 100vh;
@@ -16,7 +9,7 @@ html, body {
 /* スライド全体 */
 .slide-wrapper {
     position: relative;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,25 +58,60 @@ html, body {
 }
 
 /* スマホ向け */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .page-date {
-    font-size: 12px;
-    top: 8px;
-    right: 8px;
-    padding: 4px 8px;
+        font-size: 12px;
+        top: 8px;
+        right: 8px;
+        padding: 4px 8px;
     }
     .caption {
-    font-size: 13px;
-    right: 8px;
-    bottom: 8px;
-    max-width: 80%;
+        font-size: 13px;
+        right: 8px;
+        bottom: 8px;
+        max-width: 80%;
     }
     .slide-wrapper img {
-    max-height: 80vh;
+        max-height: 80vh;
     }
 }
 
+a {
+    color: #1a0dab;
+    &:visited {
+        color: #502a77;
+    }
+    &:hover {
+        color: #13088f;
+    }
+}
 
-#top {
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    color: #222;
+    background-color: #fcfcfc;
+}
+header,
+footer {
+    text-align: center;
+    padding: 10px 5vw;
+}
+
+body#body {
     scroll-margin-top: 80px; /* ヘッダーの高さ分の余白を確保 */
+}
+main {
+    padding: 30px 5vw;
+    max-width: 800px;
+    margin: 0 auto;
+}
+footer {
+    font-size: 14px;
+    color: #555;
+    background-color: #fafafa;
+    >.center{
+        border-top: 1px solid #888;
+    }
 }
